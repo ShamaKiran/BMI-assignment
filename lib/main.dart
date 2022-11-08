@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:homework/SecondPage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -154,6 +155,10 @@ class _MyHomePageState extends State<MyHomePage> {
                     setState(() {
                       result = weight/(height*height/10000);
                     });
+                    Navigator.push(context, MaterialPageRoute
+                      (builder: (context)=>
+                        SecondPage(result: result,)));
+
                   }
                   , child: Text(
                         "Calculate",
